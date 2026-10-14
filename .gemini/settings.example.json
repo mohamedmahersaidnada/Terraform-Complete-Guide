@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "terraform-guide": {
+      "command": "node",
+      "args": ["scripts/guide-mcp.mjs"],
+      "cwd": ".",
+      "timeout": 10000,
+      "trust": false
+    }
+  }
+}

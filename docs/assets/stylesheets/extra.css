@@ -1,0 +1,94 @@
+/* ==========================================================================
+   Terraform Complete Guide — Accessible & Lightweight Documentation Theme
+   WCAG 2.1 AA/AAA Compliant Typography, Focus States, & Interactive Contrast
+   ========================================================================== */
+
+:root {
+  --md-primary-fg-color: #5c4ee5;
+  --md-primary-fg-color--light: #7b6ff0;
+  --md-primary-fg-color--dark: #4537c7;
+  --md-accent-fg-color: #00897b;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #7b6ff0;
+  --md-primary-fg-color--light: #9b91f5;
+  --md-primary-fg-color--dark: #5c4ee5;
+  --md-accent-fg-color: #26a69a;
+}
+
+/* Accessible focus ring indicators for keyboard navigation */
+:focus-visible {
+  outline: 3px solid var(--md-accent-fg-color) !important;
+  outline-offset: 2px !important;
+  border-radius: 2px;
+}
+
+/* Enhanced high-contrast hyperlinks */
+.md-typeset a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+
+.md-typeset a:hover,
+.md-typeset a:focus {
+  text-decoration-thickness: 2px;
+}
+
+/* Clear, accessible table borders and zebra striping */
+.md-typeset table:not([class]) {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.85rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 4px;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--md-default-fg-color--lightest);
+  color: var(--md-default-fg-color);
+  font-weight: 700;
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+  border-bottom: 2px solid var(--md-default-fg-color--lighter);
+}
+
+.md-typeset table:not([class]) td {
+  padding: 0.55rem 0.8rem;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.md-typeset table:not([class]) tr:nth-child(even) td {
+  background-color: var(--md-default-fg-color--lightest);
+}
+
+/* Code block readability and contrast */
+.md-typeset pre > code {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  border-radius: 4px;
+}
+
+/* Admonitions styling with distinct visual boundary */
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  margin: 1.2rem 0;
+}
+
+/* Accessibility tag badges */
+.badge-tag {
+  display: inline-block;
+  padding: 0.15rem 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 3px;
+  background-color: var(--md-default-fg-color--lightest);
+  color: var(--md-default-fg-color);
+}

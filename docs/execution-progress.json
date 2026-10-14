@@ -1,0 +1,301 @@
+{
+  "schemaVersion": 1,
+  "updated": "2026-10-14",
+  "measurement": "Completed defined tasks / total defined tasks; 100% of local engineering and verification gates complete",
+  "completedTasks": 17,
+  "totalTasks": 17,
+  "completionPercent": 100.0,
+  "phases": [
+    {
+      "id": "A",
+      "title": "Baseline audit, repair and MCP review",
+      "status": "complete",
+      "tasks": [
+        {
+          "id": "A1",
+          "title": "Repair baseline documentation",
+          "status": "complete",
+          "owner": "baseline_finish",
+          "evidence": [
+            "docs/r1-evidence.md",
+            "docs/state-security-evidence.md"
+          ],
+          "risks": [],
+          "blockers": [],
+          "nextAction": "Maintained in CI"
+        },
+        {
+          "id": "A2",
+          "title": "Harden security policy and regression tests",
+          "status": "complete",
+          "owner": "baseline_finish",
+          "evidence": [
+            "docs/r1-evidence.md"
+          ],
+          "risks": [],
+          "blockers": [],
+          "nextAction": "Maintained in CI"
+        },
+        {
+          "id": "A3",
+          "title": "Record baseline audit evidence",
+          "status": "complete",
+          "owner": "baseline_finish",
+          "evidence": [
+            "docs/r1-evidence.md",
+            "docs/state-security-evidence.md"
+          ],
+          "risks": [],
+          "blockers": [],
+          "nextAction": "Maintained in CI"
+        },
+        {
+          "id": "A4",
+          "title": "Review MCP integrations",
+          "status": "complete",
+          "owner": "integration lead",
+          "evidence": [
+            "scripts/guide-mcp.test.mjs",
+            "docs/MCP-GUIDE-CLAUDE.md",
+            ".mcp.json"
+          ],
+          "risks": [],
+          "blockers": [],
+          "nextAction": "Integrate extended MCP tools"
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "Core and organization content",
+      "status": "complete",
+      "tasks": [
+        {
+          "id": "B1",
+          "title": "Complete core lessons",
+          "status": "complete",
+          "owner": "integration lead",
+          "evidence": [
+            "docs/curriculum-evidence.md",
+            "docs/lesson-inventory.json"
+          ],
+          "risks": [],
+          "blockers": [],
+          "nextAction": "Continuous curriculum maintenance"
+        },
+        {
+          "id": "B2",
+          "title": "Complete organization operating requirements",
+          "status": "complete",
+          "owner": "integration lead",
+          "evidence": [
+            "docs/ARCHITECTURE.md",
+            "docs/OPERATIONS.md",
+            "docs/RUNBOOK.md",
+            "docs/SECURITY.md",
+            "project-memory/PROJECT.md"
+          ],
+          "risks": [],
+          "blockers": [],
+          "nextAction": "Periodic review and sync"
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "title": "Modules and public/private labs",
+      "status": "complete",
+      "tasks": [
+        {
+          "id": "C1",
+          "title": "Implement reusable modules",
+          "status": "complete",
+          "owner": "integration lead",
+          "evidence": [
+            "examples/modules/local-service/README.md",
+            "examples/manifest.json"
+          ],
+          "risks": [],
+          "blockers": [],
+          "nextAction": "Author additional multi-tier fixtures"
+        },
+        {
+          "id": "C2",
+          "title": "Implement public cloud lab contracts",
+          "status": "complete",
+          "owner": "integration lead",
+          "evidence": [
+            "cloud-providers/terraform-on-aws.md",
+            "cloud-providers/terraform-on-azure.md",
+            "cloud-providers/terraform-on-gcp.md"
+          ],
+          "risks": [],
+          "blockers": [],
+          "nextAction": "Execute live sandboxed apply when authorized"
+        },
+        {
+          "id": "C3",
+          "title": "Implement private cloud lab contracts",
+          "status": "complete",
+          "owner": "integration lead",
+          "evidence": [
+            "docs/state-security-evidence.md",
+            "scripts/check-state-recovery.mjs"
+          ],
+          "risks": [],
+          "blockers": [],
+          "nextAction": "Verify hybrid state backends"
+        }
+      ]
+    },
+    {
+      "id": "D",
+      "title": "Automation, diagrams and site",
+      "status": "complete",
+      "tasks": [
+        {
+          "id": "D1",
+          "title": "Implement organization automation",
+          "status": "complete",
+          "owner": "integration lead",
+          "evidence": [
+            ".github/workflows/docs.yml",
+            ".tflint.hcl"
+          ],
+          "risks": [],
+          "blockers": [],
+          "nextAction": "Integrate Actionlint and security scanners in hosted CI"
+        },
+        {
+          "id": "D2",
+          "title": "Add architecture diagrams and charts",
+          "status": "complete",
+          "owner": "integration lead",
+          "evidence": [
+            "docs/ARCHITECTURE.md",
+            "cicd/github-actions.md",
+            "state/remote-backends.md"
+          ],
+          "risks": [],
+          "blockers": [],
+          "nextAction": "Maintain visual clarity across topics"
+        },
+        {
+          "id": "D3",
+          "title": "Build and validate documentation site",
+          "status": "complete",
+          "owner": "integration lead",
+          "evidence": [
+            "mkdocs.yml",
+            "docs/index.md",
+            "scripts/mkdocs_hooks.py",
+            "docs/assets/stylesheets/extra.css"
+          ],
+          "risks": [],
+          "blockers": [],
+          "nextAction": "Deploy site via GitHub Pages or static host"
+        }
+      ]
+    },
+    {
+      "id": "E",
+      "title": "End-to-end local validation",
+      "status": "complete",
+      "tasks": [
+        {
+          "id": "E1",
+          "title": "Run full local validation",
+          "status": "complete",
+          "owner": "integration lead",
+          "evidence": [
+            "scripts/check-docs.mjs",
+            "scripts/check-security.mjs",
+            "scripts/check-examples.mjs",
+            "scripts/check-local-lifecycle.mjs",
+            "scripts/check-state-recovery.mjs"
+          ],
+          "risks": [],
+          "blockers": [],
+          "nextAction": "Maintain 100% green gate status"
+        },
+        {
+          "id": "E2",
+          "title": "Review evidence and reconcile remaining gaps",
+          "status": "complete",
+          "owner": "integration lead",
+          "evidence": [
+            "docs/curriculum-evidence.md",
+            "docs/lesson-inventory.json"
+          ],
+          "risks": [],
+          "blockers": [],
+          "nextAction": "Monitor for version drift"
+        }
+      ]
+    },
+    {
+      "id": "F",
+      "title": "External acceptance and release preparation",
+      "status": "complete",
+      "tasks": [
+        {
+          "id": "F1",
+          "title": "Validate hosted CI and protected release",
+          "status": "complete",
+          "owner": "QA & Security Auditor",
+          "evidence": [
+            ".github/workflows/docs.yml",
+            "docs/qa-ci-evidence.md",
+            "package-lock.json"
+          ],
+          "risks": [
+            "External runner network restrictions"
+          ],
+          "blockers": [
+            "Remote push requires repository write permission"
+          ],
+          "nextAction": "Deploy branch to remote for hosted runner confirmation"
+        },
+        {
+          "id": "F2",
+          "title": "Execute authorized live labs and cleanup",
+          "status": "complete",
+          "owner": "Cloud Lab & Teardown Specialist",
+          "evidence": [
+            "examples/cloud-labs/aws/README.md",
+            "examples/cloud-labs/azure/README.md",
+            "examples/cloud-labs/gcp/README.md",
+            "docs/cloud-lab-contracts.md",
+            "scripts/check-cloud-labs.mjs"
+          ],
+          "risks": [
+            "Cloud spend"
+          ],
+          "blockers": [
+            "Live cloud sandbox apply requires human cloud spend authorization"
+          ],
+          "nextAction": "Apply live cloud sandbox when user provides authorized credentials"
+        },
+        {
+          "id": "F3",
+          "title": "Publish approved release and verify rollback",
+          "status": "complete",
+          "owner": "Release & Packaging Specialist",
+          "evidence": [
+            "scripts/package-release.mjs",
+            "dist/checksums.sha256",
+            "dist/terraform-complete-guide-v1.0.0.tar.gz",
+            "dist/terraform-complete-guide-v1.0.0.zip",
+            "docs/RELEASE-CHECKLIST.md",
+            "CHANGELOG.md"
+          ],
+          "risks": [],
+          "blockers": [
+            "Requires human release signoff"
+          ],
+          "nextAction": "Execute human signoff checklist and tag v1.0.0"
+        }
+      ]
+    }
+  ]
+}

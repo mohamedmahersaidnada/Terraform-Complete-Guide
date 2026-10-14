@@ -1,0 +1,153 @@
+site_name: Terraform Complete Guide
+site_description: Authoritative, modular, and verifiable curriculum for HashiCorp Terraform 1.14.x and AI Engineering OS.
+site_author: Terraform Complete Guide Maintainers
+site_url: https://github.com/mnada/Terraform-Complete-Guide
+
+repo_name: mnada/Terraform-Complete-Guide
+repo_url: https://github.com/mnada/Terraform-Complete-Guide
+edit_uri: blob/main/
+
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: material
+  language: en
+  logo: assets/images/logo.svg
+  favicon: assets/images/logo.svg
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+  icon:
+    repo: fontawesome/brands/github
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - attr_list
+  - def_list
+  - toc:
+      permalink: true
+
+hooks:
+  - scripts/mkdocs_hooks.py
+
+nav:
+  - Getting Started:
+      - Overview: index.md
+      - Beginner Learning Path: docs/learning-path.md
+      - Command Reference: docs/command-reference.md
+      - Terminology Glossary: docs/glossary.md
+  - Curriculum:
+      - 1. Basics:
+          - Introduction and Installation: basics/intro-and-installation.md
+          - File Structure and Syntax: basics/file-structure-and-syntax.md
+      - 2. Core Concepts:
+          - Providers and Resources: core-concepts/providers-and-resources.md
+          - Variables and Outputs: core-concepts/variables-and-outputs.md
+          - Expressions, Iteration and Lifecycle: core-concepts/expressions-and-lifecycle.md
+      - 3. State Management:
+          - State Management and Recovery: state/state-management.md
+          - Remote Backends and State Boundaries: state/remote-backends.md
+      - 4. Modules:
+          - Creating Reusable Modules: modules/creating-modules.md
+          - Using Module Registries: modules/module-registry.md
+      - 5. Provisioners:
+          - File and Connection Blocks: provisioners/file-and-connection.md
+          - Local-exec and Remote-exec Provisioners: provisioners/local-and-remote-exec.md
+      - 6. Cloud Providers:
+          - Terraform on AWS: cloud-providers/terraform-on-aws.md
+          - Terraform on Azure: cloud-providers/terraform-on-azure.md
+          - Terraform on GCP: cloud-providers/terraform-on-gcp.md
+      - 7. Security:
+          - IAM and Least Privilege Policies: security/iam-and-policies.md
+          - Secrets Management: security/secrets-management.md
+      - 8. Testing:
+          - Validate, Plan, and Native Tests: testing/terraform-validate-and-plan.md
+          - Terratest and Integration Testing: testing/terratest.md
+      - 9. CI/CD:
+          - GitHub Actions Pipelines: cicd/github-actions.md
+          - Azure DevOps Pipelines: cicd/azure-devops.md
+      - 10. Best Practices:
+          - Resource Naming and Tagging Conventions: best-practices/naming-conventions.md
+          - Workspace Strategy and Environment Isolation: best-practices/workspace-strategy.md
+  - Labs & Fixtures:
+      - Overview: examples/README.md
+      - Local Basics Lab: examples/local-basics/README.md
+      - Remote Backends Lab: examples/backends/README.md
+      - Reusable Local Service Module: examples/modules/local-service/README.md
+      - AWS Reference Lab: examples/cloud-labs/aws/README.md
+      - Azure Reference Lab: examples/cloud-labs/azure/README.md
+      - GCP Reference Lab: examples/cloud-labs/gcp/README.md
+  - Architecture & Governance:
+      - System Architecture: docs/ARCHITECTURE.md
+      - Cloud Lab Contracts: docs/cloud-lab-contracts.md
+      - Curriculum Verification Evidence: docs/curriculum-evidence.md
+      - State Security Verification: docs/state-security-evidence.md
+      - Platform Baseline Evidence: docs/phase2-evidence.md
+      - QA and CI Verification Evidence: docs/qa-ci-evidence.md
+      - Security Policy: docs/SECURITY.md
+      - Operations Manual: docs/OPERATIONS.md
+      - Runbook: docs/RUNBOOK.md
+      - Content Standard: docs/content-standard.md
+      - Release Checklist: docs/RELEASE-CHECKLIST.md
+      - Audits & Operations Records:
+          - Release 1 Baseline Evidence: docs/r1-evidence.md
+          - Compatibility Matrix: docs/compatibility.md
+          - Environment Audit: docs/environment-audit.md
+          - Current Audit: docs/current-audit.md
+          - Implementation Status: docs/implementation-status.md
+          - Production Roadmap: docs/production-roadmap.md
+          - AI Engineering OS: docs/engineering-os.md
+          - Multi-Provider Architecture: docs/MULTI-PROVIDER.md
+          - MCP Guide for Claude: docs/MCP-GUIDE-CLAUDE.md

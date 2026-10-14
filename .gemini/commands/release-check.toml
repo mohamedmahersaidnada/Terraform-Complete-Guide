@@ -1,0 +1,4 @@
+description = "AI Engineering OS: release-check"
+prompt = """
+Follow GEMINI.md and core/OPERATING_SYSTEM.md. Execute the canonical workflow in core/workflows/release-check.md. Treat any user arguments as task context. Keep evidence explicit and update project-memory only when durable facts change.
+"""

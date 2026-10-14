@@ -1,0 +1,4 @@
+# Sanitized partial configuration; bucket must already exist with versioning.
+# Authenticate with Application Default Credentials, never a key in this file.
+bucket = "REPLACE_WITH_STATE_BUCKET"
+prefix = "guide/dev"

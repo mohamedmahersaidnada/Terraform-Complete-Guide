@@ -1,0 +1,22 @@
+{
+  "name": "terraform-complete-guide",
+  "version": "1.0.0",
+  "description": "Authoritative, modular, and verifiable curriculum for HashiCorp Terraform 1.14.x and AI Engineering OS.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test scripts/check-docs.test.mjs scripts/check-examples.test.mjs scripts/bootstrap.test.mjs scripts/check-security.test.mjs scripts/guide-mcp.test.mjs scripts/check-cloud-labs.test.mjs",
+    "check:docs": "node scripts/check-docs.mjs",
+    "check:security": "node scripts/check-security.mjs",
+    "check:cloud-labs": "node scripts/check-cloud-labs.mjs",
+    "package": "node scripts/package-release.mjs"
+  },
+  "keywords": [
+    "terraform",
+    "infrastructure-as-code",
+    "iac",
+    "curriculum",
+    "guide"
+  ],
+  "author": "Terraform Complete Guide Maintainers",
+  "license": "MIT"
+}

@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "examples": [
+    {
+      "path": "examples/local-basics",
+      "lesson": "basics/intro-and-installation.md",
+      "runtime": "terraform >=1.14.8,<2.0.0",
+      "testClass": "local",
+      "cost": "none",
+      "cloudCredentials": false
+    },
+    {
+      "path": "examples/cloud-labs/aws",
+      "lesson": "cloud-providers/terraform-on-aws.md",
+      "runtime": "terraform ~> 1.14.0",
+      "testClass": "static",
+      "cost": "free-tier",
+      "cloudCredentials": false
+    },
+    {
+      "path": "examples/cloud-labs/azure",
+      "lesson": "cloud-providers/terraform-on-azure.md",
+      "runtime": "terraform ~> 1.14.0",
+      "testClass": "static",
+      "cost": "free-tier",
+      "cloudCredentials": false
+    },
+    {
+      "path": "examples/cloud-labs/gcp",
+      "lesson": "cloud-providers/terraform-on-gcp.md",
+      "runtime": "terraform ~> 1.14.0",
+      "testClass": "static",
+      "cost": "free-tier",
+      "cloudCredentials": false
+    }
+  ],
+  "modules": [
+    {
+      "path": "examples/modules/local-service",
+      "lesson": "modules/creating-modules.md",
+      "runtime": "terraform >=1.14.8,<2.0.0",
+      "testClass": "local",
+      "cost": "none",
+      "cloudCredentials": false
+    }
+  ]
+}

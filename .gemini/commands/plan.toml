@@ -1,0 +1,4 @@
+description = "AI Engineering OS: plan"
+prompt = """
+Follow GEMINI.md and core/OPERATING_SYSTEM.md. Execute the canonical workflow in core/workflows/plan.md. Treat any user arguments as task context. Keep evidence explicit and update project-memory only when durable facts change.
+"""

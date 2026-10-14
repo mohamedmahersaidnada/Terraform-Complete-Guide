@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "terraform-guide": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["scripts/guide-mcp.mjs"]
+    }
+  }
+}

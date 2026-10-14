@@ -1,0 +1,203 @@
+{
+  "schemaVersion": 1,
+  "lessons": [
+    {
+      "path": "basics/file-structure-and-syntax.md",
+      "title": "File Structure And Syntax",
+      "status": "reviewed",
+      "owner": "maintainers",
+      "reviewed": "2026-09-29",
+      "validation": "local",
+      "evidence": "docs/phase2-evidence.md"
+    },
+    {
+      "path": "basics/intro-and-installation.md",
+      "title": "Intro And Installation",
+      "status": "reviewed",
+      "owner": "maintainers",
+      "reviewed": "2026-09-29",
+      "validation": "local",
+      "evidence": "docs/phase2-evidence.md"
+    },
+    {
+      "path": "core-concepts/providers-and-resources.md",
+      "title": "Providers And Resources",
+      "status": "reviewed",
+      "owner": "maintainers",
+      "reviewed": "2026-09-29",
+      "validation": "local",
+      "evidence": "docs/phase2-evidence.md"
+    },
+    {
+      "path": "core-concepts/variables-and-outputs.md",
+      "title": "Variables And Outputs",
+      "status": "reviewed",
+      "owner": "maintainers",
+      "reviewed": "2026-09-29",
+      "validation": "local",
+      "evidence": "docs/phase2-evidence.md"
+    },
+    {
+      "path": "state/remote-backends.md",
+      "title": "Remote Backends",
+      "status": "reviewed",
+      "owner": "maintainers",
+      "reviewed": "2026-10-05",
+      "validation": "local",
+      "evidence": "docs/state-security-evidence.md"
+    },
+    {
+      "path": "state/state-management.md",
+      "title": "State Management",
+      "status": "reviewed",
+      "owner": "maintainers",
+      "reviewed": "2026-10-05",
+      "validation": "local",
+      "evidence": "docs/state-security-evidence.md"
+    },
+    {
+      "path": "modules/creating-modules.md",
+      "title": "Creating Modules",
+      "status": "reviewed",
+      "owner": "maintainers",
+      "reviewed": "2026-10-11",
+      "validation": "reference",
+      "evidence": "docs/curriculum-evidence.md"
+    },
+    {
+      "path": "modules/module-registry.md",
+      "title": "Module Registry",
+      "status": "reviewed",
+      "owner": "maintainers",
+      "reviewed": "2026-10-11",
+      "validation": "reference",
+      "evidence": "docs/curriculum-evidence.md"
+    },
+    {
+      "path": "provisioners/file-and-connection.md",
+      "title": "File And Connection",
+      "status": "reviewed",
+      "owner": "maintainers",
+      "reviewed": "2026-10-11",
+      "validation": "reference",
+      "evidence": "docs/curriculum-evidence.md"
+    },
+    {
+      "path": "provisioners/local-and-remote-exec.md",
+      "title": "Local And Remote Exec",
+      "status": "reviewed",
+      "owner": "maintainers",
+      "reviewed": "2026-10-11",
+      "validation": "reference",
+      "evidence": "docs/curriculum-evidence.md"
+    },
+    {
+      "path": "cloud-providers/terraform-on-aws.md",
+      "title": "Terraform On Aws",
+      "status": "reviewed",
+      "owner": "maintainers",
+      "reviewed": "2026-10-11",
+      "validation": "reference",
+      "evidence": "docs/curriculum-evidence.md"
+    },
+    {
+      "path": "cloud-providers/terraform-on-azure.md",
+      "title": "Terraform On Azure",
+      "status": "reviewed",
+      "owner": "maintainers",
+      "reviewed": "2026-10-11",
+      "validation": "reference",
+      "evidence": "docs/curriculum-evidence.md"
+    },
+    {
+      "path": "cloud-providers/terraform-on-gcp.md",
+      "title": "Terraform On Gcp",
+      "status": "reviewed",
+      "owner": "maintainers",
+      "reviewed": "2026-10-11",
+      "validation": "reference",
+      "evidence": "docs/curriculum-evidence.md"
+    },
+    {
+      "path": "security/iam-and-policies.md",
+      "title": "Iam And Policies",
+      "status": "reviewed",
+      "owner": "maintainers",
+      "reviewed": "2026-10-11",
+      "validation": "reference",
+      "evidence": "docs/curriculum-evidence.md"
+    },
+    {
+      "path": "security/secrets-management.md",
+      "title": "Secrets Management",
+      "status": "reviewed",
+      "owner": "maintainers",
+      "reviewed": "2026-10-11",
+      "validation": "reference",
+      "evidence": "docs/curriculum-evidence.md"
+    },
+    {
+      "path": "testing/terraform-validate-and-plan.md",
+      "title": "Terraform Validate And Plan",
+      "status": "reviewed",
+      "owner": "maintainers",
+      "reviewed": "2026-10-11",
+      "validation": "local",
+      "evidence": "docs/curriculum-evidence.md"
+    },
+    {
+      "path": "testing/terratest.md",
+      "title": "Terratest",
+      "status": "reviewed",
+      "owner": "maintainers",
+      "reviewed": "2026-10-11",
+      "validation": "reference",
+      "evidence": "docs/curriculum-evidence.md"
+    },
+    {
+      "path": "cicd/azure-devops.md",
+      "title": "Azure Devops",
+      "status": "reviewed",
+      "owner": "maintainers",
+      "reviewed": "2026-10-11",
+      "validation": "reference",
+      "evidence": "docs/curriculum-evidence.md"
+    },
+    {
+      "path": "cicd/github-actions.md",
+      "title": "Github Actions",
+      "status": "reviewed",
+      "owner": "maintainers",
+      "reviewed": "2026-10-11",
+      "validation": "reference",
+      "evidence": "docs/curriculum-evidence.md"
+    },
+    {
+      "path": "best-practices/naming-conventions.md",
+      "title": "Naming Conventions",
+      "status": "reviewed",
+      "owner": "maintainers",
+      "reviewed": "2026-10-11",
+      "validation": "reference",
+      "evidence": "docs/curriculum-evidence.md"
+    },
+    {
+      "path": "best-practices/workspace-strategy.md",
+      "title": "Workspace Strategy",
+      "status": "reviewed",
+      "owner": "maintainers",
+      "reviewed": "2026-10-11",
+      "validation": "reference",
+      "evidence": "docs/curriculum-evidence.md"
+    },
+    {
+      "path": "core-concepts/expressions-and-lifecycle.md",
+      "title": "Expressions And Lifecycle",
+      "status": "reviewed",
+      "owner": "maintainers",
+      "reviewed": "2026-09-29",
+      "validation": "reference",
+      "evidence": "docs/phase2-evidence.md"
+    }
+  ]
+}

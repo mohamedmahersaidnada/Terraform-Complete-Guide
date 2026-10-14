@@ -1,0 +1,63 @@
+name: Documentation
+on:
+  pull_request:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+  schedule:
+    - cron: '17 6 * * 1'
+permissions:
+  contents: read
+concurrency:
+  group: quality-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  docs:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        node: ['26.10.0', '24.21.0']
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: ${{ matrix.node }}
+      - run: node --test
+      - run: node scripts/check-docs.mjs
+      - run: node scripts/check-security.mjs
+      - run: node scripts/package-release.mjs
+  workflow-syntax:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Install pinned syntax validator
+        run: go install github.com/rhysd/actionlint/cmd/actionlint@v1.7.11
+      - name: Validate workflow syntax and expressions
+        run: $(go env GOPATH)/bin/actionlint -shellcheck=
+  terraform-local:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version-file: .node-version
+      - uses: hashicorp/setup-terraform@b9cd54a3c349d3f38e8881555d616ced269862dd # v3.1.2
+        with:
+          terraform_version: 1.14.8
+          terraform_wrapper: false
+      - run: node scripts/check-examples.mjs
+      - run: node scripts/check-local-lifecycle.mjs
+      - run: node scripts/check-state-recovery.mjs
