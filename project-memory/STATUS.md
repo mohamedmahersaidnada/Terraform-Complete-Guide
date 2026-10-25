@@ -1,8 +1,10 @@
 # Status
 
-Last verified: 2026-10-14. Release packaging utility, v1.0.0 release checklist, and deterministic artifacts generated.
+Last verified: 2026-10-25. Release v1.0.0 published to GitHub, release archives uploaded, and hosted GitHub Actions CI verified (7/7 jobs passed).
 
 ## Working
+- Production Release Published: `https://github.com/mohamedmahersaidnada/Terraform-Complete-Guide/releases/tag/v1.0.0` with deterministic `.tar.gz`, `.zip`, and `checksums.sha256`.
+- Hosted CI (`docs.yml`): Run 40177102604 completed with 100% success across all 7 jobs (Ubuntu & Windows matrix).
 - Complete Curriculum: All 22 lessons across 10 domains fully authored, reviewed, and validated with zero placeholders.
 - Documentation checker (`check-docs.mjs`): 135 markdown files verified with 0 errors.
 - Security scanner (`check-security.mjs`): 210 working tree files verified; zero secret leaks or unsafe workflow permissions.
@@ -22,7 +24,7 @@ Last verified: 2026-10-14. Release packaging utility, v1.0.0 release checklist, 
 - Core specifications: `ARCHITECTURE.md`, `OPERATIONS.md`, `RUNBOOK.md`, `SECURITY.md`, `state-security-evidence.md`, and `curriculum-evidence.md` fully defined.
 
 ## In progress
-- Final release readiness review and human signoff verification.
+- None (v1.0.0 delivery complete).
 
 ## Blocked
-- Hosted cloud execution requires authorized sandbox credentials and human spend approval.
+- Live cloud sandbox applies require user-provided sandbox credentials and human spend approval.

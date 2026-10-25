@@ -2,11 +2,10 @@
 
 ## Now
 - Complete end-to-end local validation rerun and release packaging verification (Completed).
-- Review and report program milestone progress to user.
+- Deploy remote repository, release v1.0.0 tag, and assets to GitHub (Completed).
+- Verify hosted GitHub Actions CI workflow execution (Completed, 7/7 jobs green).
 
 ## Next
-- Execute human signoff checklist (`docs/RELEASE-CHECKLIST.md`).
-- Prepare remote branch and push for hosted GitHub Actions CI execution.
 - Prepare cloud sandbox credentials when live cloud apply is authorized.
 
 ## Later
